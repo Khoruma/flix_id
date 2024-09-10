@@ -4,7 +4,6 @@ import 'package:flix_id/domain/entities/actor.dart';
 import 'package:flix_id/domain/entities/movie.dart';
 import 'package:flix_id/domain/entities/movie_detail.dart';
 import 'package:flix_id/domain/entities/result.dart';
-import 'package:flutter_riverpod/flutter_riverpod.dart';
 
 class TmdbMovieRepository implements MovieRepository {
   TmdbMovieRepository({Dio? dio}) : _dio = dio ?? Dio();
