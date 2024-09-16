@@ -1,3 +1,4 @@
+import '../../extensions/build_context_extension.dart';
 import '../../providers/user_data/user_data_provider.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
@@ -14,12 +15,17 @@ class MainPage extends ConsumerStatefulWidget {
 class _MainPageState extends ConsumerState<MainPage> {
   @override
   Widget build(BuildContext context) {
-    ref.listen(userDataProvider, (previous, next) {
-      // * JIKA DATA SEBELUMNYA TIDAK SAMA DENGAN NULL DAN SELANJUTNYA ADALAH ASYNC DATA DAN VALUENYA NULL
-      if (previous != null && next is AsyncData && next.value == null) {
-        ref.read(routerProvider).goNamed('login');
-      }
-    });
+    ref.listen(
+      userDataProvider,
+      (previous, next) {
+        // * JIKA DATA SEBELUMNYA TIDAK SAMA DENGAN NULL DAN SELANJUTNYA ADALAH ASYNC DATA DAN VALUENYA NULL
+        if (previous != null && next is AsyncData && next.value == null) {
+          ref.read(routerProvider).goNamed('login');
+        } else if (next is AsyncError) {
+          context.showSnackBar(next.error.toString());
+        }
+      },
+    );
 
     return Scaffold(
       appBar: AppBar(

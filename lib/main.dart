@@ -1,9 +1,11 @@
 import 'package:firebase_core/firebase_core.dart';
-import 'package:flix_id/firebase_options.dart';
-import 'package:flix_id/presentation/pages/login_page/login_page.dart';
-import 'package:flix_id/presentation/providers/router/router_provider.dart';
+import 'package:google_fonts/google_fonts.dart';
+import 'firebase_options.dart';
+import 'presentation/providers/router/router_provider.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
+
+import 'presentation/misc/constants.dart';
 
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
@@ -45,9 +47,22 @@ class MyApp extends ConsumerWidget {
         //
         // This works for code too, not just values: Most code changes can be
         // tested with just a hot reload.
-        colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
+        colorScheme: ColorScheme.fromSeed(
+          seedColor: saffron,
+          surface: backgroundColor,
+          brightness: Brightness.dark,
+        ),
+        textTheme: TextTheme(
+          // * STYLE TEXT DEFAULT
+          bodyMedium: GoogleFonts.poppins(color: ghostWhite),
+          // * STYLE TEXT FIELD AND LABEL TEXT FIELD
+          bodyLarge: GoogleFonts.poppins(color: ghostWhite),
+          // * STYLE TEXT BUTTON AND LABEL BUTTON
+          labelLarge: GoogleFonts.poppins(color: ghostWhite),
+        ),
         useMaterial3: true,
       ),
+      debugShowCheckedModeBanner: false,
     );
   }
 }
