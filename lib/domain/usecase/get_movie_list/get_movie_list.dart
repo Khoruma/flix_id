@@ -1,7 +1,7 @@
-import 'package:flix_id/data/repositories/movie_repository.dart';
-import 'package:flix_id/domain/entities/result.dart';
-import 'package:flix_id/domain/usecase/get_movie_list/get_movie_list_param.dart';
-import 'package:flix_id/domain/usecase/usecase.dart';
+import '../../../data/repositories/movie_repository.dart';
+import '../../entities/result.dart';
+import 'get_movie_list_param.dart';
+import '../usecase.dart';
 
 import '../../entities/movie.dart';
 

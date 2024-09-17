@@ -1,4 +1,4 @@
-import 'package:flix_id/domain/entities/movie.dart';
+import '../../entities/movie.dart';
 
 class GetMovieDetailParam {
   final Movie movie;

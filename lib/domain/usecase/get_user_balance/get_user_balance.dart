@@ -1,7 +1,7 @@
-import 'package:flix_id/data/repositories/user_repository.dart';
-import 'package:flix_id/domain/entities/result.dart';
-import 'package:flix_id/domain/usecase/get_user_balance/get_user_balance_param.dart';
-import 'package:flix_id/domain/usecase/usecase.dart';
+import '../../../data/repositories/user_repository.dart';
+import '../../entities/result.dart';
+import 'get_user_balance_param.dart';
+import '../usecase.dart';
 
 class GetUserBalance implements UseCase<Result<int>, GetUserBalanceParam> {
   final UserRepository _userRepository;

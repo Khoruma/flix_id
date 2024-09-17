@@ -1,6 +1,6 @@
 import 'dart:io';
 
-import 'package:flix_id/domain/entities/user.dart';
+import '../../entities/user.dart';
 
 class UploadProfilePictureParam {
   final File imageFile;

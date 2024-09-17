@@ -1,10 +1,10 @@
-import 'package:flix_id/data/repositories/transaction_repository.dart';
-import 'package:flix_id/domain/entities/result.dart';
-import 'package:flix_id/domain/entities/transaction.dart';
-import 'package:flix_id/domain/usecase/create_transaction/create_transaction.dart';
-import 'package:flix_id/domain/usecase/create_transaction/create_transaction_param.dart';
-import 'package:flix_id/domain/usecase/top_up/top_up_param.dart';
-import 'package:flix_id/domain/usecase/usecase.dart';
+import '../../../data/repositories/transaction_repository.dart';
+import '../../entities/result.dart';
+import '../../entities/transaction.dart';
+import '../create_transaction/create_transaction.dart';
+import '../create_transaction/create_transaction_param.dart';
+import 'top_up_param.dart';
+import '../usecase.dart';
 
 class TopUp implements UseCase<Result<void>, TopUpParam> {
   final TransactionRepository _transactionRepository;

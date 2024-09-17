@@ -1,5 +1,5 @@
-import 'package:flix_id/data/repositories/authentication.dart';
-import 'package:flix_id/domain/entities/result.dart';
+import '../repositories/authentication.dart';
+import '../../domain/entities/result.dart';
 
 import 'package:firebase_auth/firebase_auth.dart' as firebase_auth;
 

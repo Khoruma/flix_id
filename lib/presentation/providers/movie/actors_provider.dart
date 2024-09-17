@@ -1,7 +1,7 @@
-import 'package:flix_id/domain/entities/actor.dart';
-import 'package:flix_id/domain/usecase/get_actors/get_actors.dart';
-import 'package:flix_id/domain/usecase/get_actors/get_actors_param.dart';
-import 'package:flix_id/presentation/providers/usecases/get_actors_provider.dart';
+import '../../../domain/entities/actor.dart';
+import '../../../domain/usecase/get_actors/get_actors.dart';
+import '../../../domain/usecase/get_actors/get_actors_param.dart';
+import '../usecases/get_actors_provider.dart';
 import 'package:riverpod_annotation/riverpod_annotation.dart';
 
 import '../../../domain/entities/result.dart';

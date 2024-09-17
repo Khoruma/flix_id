@@ -1,8 +1,8 @@
-import 'package:flix_id/data/repositories/movie_repository.dart';
-import 'package:flix_id/domain/entities/movie_detail.dart';
-import 'package:flix_id/domain/entities/result.dart';
-import 'package:flix_id/domain/usecase/get_movie_detail/get_movie_detail_param.dart';
-import 'package:flix_id/domain/usecase/usecase.dart';
+import '../../../data/repositories/movie_repository.dart';
+import '../../entities/movie_detail.dart';
+import '../../entities/result.dart';
+import 'get_movie_detail_param.dart';
+import '../usecase.dart';
 
 class GetMovieDetail
     implements UseCase<Result<MovieDetail>, GetMovieDetailParam> {

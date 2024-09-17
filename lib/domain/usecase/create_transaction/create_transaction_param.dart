@@ -1,4 +1,4 @@
-import 'package:flix_id/domain/entities/transaction.dart';
+import '../../entities/transaction.dart';
 
 class CreateTransactionParam {
   final Transaction transaction;

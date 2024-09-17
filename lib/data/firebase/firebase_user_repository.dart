@@ -2,9 +2,9 @@ import 'dart:io';
 
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:firebase_storage/firebase_storage.dart';
-import 'package:flix_id/data/repositories/user_repository.dart';
-import 'package:flix_id/domain/entities/result.dart';
-import 'package:flix_id/domain/entities/user.dart';
+import '../repositories/user_repository.dart';
+import '../../domain/entities/result.dart';
+import '../../domain/entities/user.dart';
 import 'package:path/path.dart';
 
 class FirebaseUserRepository implements UserRepository {

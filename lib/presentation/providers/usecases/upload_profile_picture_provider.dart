@@ -1,5 +1,5 @@
-import 'package:flix_id/domain/usecase/upload_profile_picture/upload_profile_picture.dart';
-import 'package:flix_id/presentation/providers/repositories/user_repository/user_repository_provider.dart';
+import '../../../domain/usecase/upload_profile_picture/upload_profile_picture.dart';
+import '../repositories/user_repository/user_repository_provider.dart';
 import 'package:riverpod_annotation/riverpod_annotation.dart';
 
 part 'upload_profile_picture_provider.g.dart';

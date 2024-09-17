@@ -1,7 +1,7 @@
-import 'package:flix_id/data/repositories/authentication.dart';
-import 'package:flix_id/data/repositories/user_repository.dart';
-import 'package:flix_id/domain/entities/result.dart';
-import 'package:flix_id/domain/usecase/usecase.dart';
+import '../../../data/repositories/authentication.dart';
+import '../../../data/repositories/user_repository.dart';
+import '../../entities/result.dart';
+import '../usecase.dart';
 
 import '../../entities/user.dart';
 

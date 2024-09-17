@@ -1,3 +1,11 @@
 {
-  "cSpell.language": "en,lorem,en-GB,en-US,id,id-ID"
+  "cSpell.language": "en,lorem,en-GB,en-US,id,id-ID",
+  "cSpell.words": [
+    "firestore",
+    "Flix",
+    "Respository",
+    "riverpod",
+    "usecase",
+    "usecases"
+  ]
 }

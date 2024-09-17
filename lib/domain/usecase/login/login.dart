@@ -1,5 +1,5 @@
-import 'package:flix_id/data/repositories/authentication.dart';
-import 'package:flix_id/data/repositories/user_repository.dart';
+import '../../../data/repositories/authentication.dart';
+import '../../../data/repositories/user_repository.dart';
 
 import '../../entities/result.dart';
 import '../../entities/user.dart';

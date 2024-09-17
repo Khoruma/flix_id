@@ -1,8 +1,8 @@
-import 'package:flix_id/data/repositories/transaction_repository.dart';
-import 'package:flix_id/domain/entities/result.dart';
-import 'package:flix_id/domain/entities/transaction.dart';
-import 'package:flix_id/domain/usecase/get_transaction/get_transaction_param.dart';
-import 'package:flix_id/domain/usecase/usecase.dart';
+import '../../../data/repositories/transaction_repository.dart';
+import '../../entities/result.dart';
+import '../../entities/transaction.dart';
+import 'get_transaction_param.dart';
+import '../usecase.dart';
 
 class GetTransaction
     implements UseCase<Result<List<Transaction>>, GetTransactionParam> {

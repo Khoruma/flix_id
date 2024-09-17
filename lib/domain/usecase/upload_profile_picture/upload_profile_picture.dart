@@ -1,8 +1,8 @@
-import 'package:flix_id/data/repositories/user_repository.dart';
-import 'package:flix_id/domain/entities/result.dart';
-import 'package:flix_id/domain/entities/user.dart';
-import 'package:flix_id/domain/usecase/upload_profile_picture/upload_profile_picture_param.dart';
-import 'package:flix_id/domain/usecase/usecase.dart';
+import '../../../data/repositories/user_repository.dart';
+import '../../entities/result.dart';
+import '../../entities/user.dart';
+import 'upload_profile_picture_param.dart';
+import '../usecase.dart';
 
 class UploadProfilePicture
     implements UseCase<Result<User>, UploadProfilePictureParam> {

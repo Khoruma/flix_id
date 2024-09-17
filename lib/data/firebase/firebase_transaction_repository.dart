@@ -1,7 +1,7 @@
-import 'package:flix_id/data/firebase/firebase_user_repository.dart';
-import 'package:flix_id/data/repositories/transaction_repository.dart';
-import 'package:flix_id/domain/entities/result.dart';
-import 'package:flix_id/domain/entities/transaction.dart';
+import 'firebase_user_repository.dart';
+import '../repositories/transaction_repository.dart';
+import '../../domain/entities/result.dart';
+import '../../domain/entities/transaction.dart';
 
 import 'package:cloud_firestore/cloud_firestore.dart' as firestore;
 
