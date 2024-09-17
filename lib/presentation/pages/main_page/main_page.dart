@@ -1,5 +1,4 @@
 import '../../extensions/build_context_extension.dart';
-import '../../misc/methods.dart';
 import '../../providers/user_data/user_data_provider.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
@@ -7,6 +6,7 @@ import 'package:flutter_riverpod/flutter_riverpod.dart';
 import '../../providers/router/router_provider.dart';
 import '../../widgets/bottom_navbar.dart';
 import '../../widgets/bottom_navbar_item.dart';
+import '../profile_page/profile_page.dart';
 
 class MainPage extends ConsumerStatefulWidget {
   const MainPage({super.key});
@@ -49,7 +49,7 @@ class _MainPageState extends ConsumerState<MainPage> {
                 child: Text('Ticket page'),
               ),
               Center(
-                child: Text('Profile page'),
+                child: ProfilePage(),
               ),
             ],
           ),
