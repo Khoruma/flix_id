@@ -46,7 +46,6 @@ class LoginPage extends ConsumerWidget {
                 FlixTextField(
                   labelText: 'Email',
                   controller: emailController,
-                  obscureText: false,
                 ),
                 verticalSpaces(24),
                 FlixTextField(
@@ -64,29 +63,43 @@ class LoginPage extends ConsumerWidget {
                       ),
                     )),
                 verticalSpaces(24),
-                switch (ref.watch(userDataProvider)) {
-                  AsyncData(:final value) => value == null
-                      ? SizedBox(
-                          width: double.infinity,
-                          child: ElevatedButton(
-                            onPressed: () {
-                              ref.read(userDataProvider.notifier).login(
-                                  email: emailController.text,
-                                  password: passwordController.text);
-                            },
-                            child: const Text(
-                              'Login',
-                              style: TextStyle(fontWeight: FontWeight.bold),
-                            ),
-                          ),
-                        )
-                      : const Center(
-                          child: CircularProgressIndicator(),
-                        ),
-                  _ => const Center(
-                      child: CircularProgressIndicator(),
+                SizedBox(
+                  width: double.infinity,
+                  child: ElevatedButton(
+                    onPressed: () {
+                      ref.read(userDataProvider.notifier).login(
+                          email: emailController.text,
+                          password: passwordController.text);
+                    },
+                    child: const Text(
+                      'Login',
+                      style: TextStyle(fontWeight: FontWeight.bold),
                     ),
-                },
+                  ),
+                ),
+                // switch (ref.watch(userDataProvider)) {
+                //   AsyncData(:final value) => value == null
+                //       ? SizedBox(
+                //           width: double.infinity,
+                //           child: ElevatedButton(
+                //             onPressed: () {
+                //               ref.read(userDataProvider.notifier).login(
+                //                   email: emailController.text,
+                //                   password: passwordController.text);
+                //             },
+                //             child: const Text(
+                //               'Login',
+                //               style: TextStyle(fontWeight: FontWeight.bold),
+                //             ),
+                //           ),
+                //         )
+                //       : const Center(
+                //           child: CircularProgressIndicator(),
+                //         ),
+                //   _ => const Center(
+                //       child: CircularProgressIndicator(),
+                //     ),
+                // },
                 verticalSpaces(24),
                 Row(
                   mainAxisAlignment: MainAxisAlignment.center,

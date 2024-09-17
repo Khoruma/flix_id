@@ -58,13 +58,11 @@ class RegisterPage extends ConsumerWidget {
                     FlixTextField(
                       labelText: 'Name',
                       controller: nameController,
-                      obscureText: false,
                     ),
                     verticalSpaces(24),
                     FlixTextField(
                       labelText: 'Email',
                       controller: emailController,
-                      obscureText: false,
                     ),
                     verticalSpaces(24),
                     FlixTextField(

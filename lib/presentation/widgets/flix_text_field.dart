@@ -11,7 +11,7 @@ class FlixTextField extends StatelessWidget {
       {super.key,
       required this.labelText,
       required this.controller,
-      required this.obscureText});
+      this.obscureText = false});
 
   @override
   Widget build(BuildContext context) {
