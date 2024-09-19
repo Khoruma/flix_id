@@ -6,6 +6,7 @@ import 'package:flutter_riverpod/flutter_riverpod.dart';
 import '../../providers/router/router_provider.dart';
 import '../../widgets/bottom_navbar.dart';
 import '../../widgets/bottom_navbar_item.dart';
+import '../movie_page/movie_page.dart';
 import '../profile_page/profile_page.dart';
 
 class MainPage extends ConsumerStatefulWidget {
@@ -41,14 +42,14 @@ class _MainPageState extends ConsumerState<MainPage> {
             onPageChanged: (value) => setState(() {
               selectedPage = value;
             }),
-            children: const [
+            children: [
               Center(
-                child: Text('Main page'),
+                child: MoviePage(),
               ),
-              Center(
+              const Center(
                 child: Text('Ticket page'),
               ),
-              Center(
+              const Center(
                 child: ProfilePage(),
               ),
             ],
