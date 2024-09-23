@@ -22,7 +22,7 @@ class TmdbMovieRepository implements MovieRepository {
   Future<Result<List<Actor>>> getActors({required int id}) async {
     try {
       final response = await _dio!.get(
-          'https://api.themoviedb.org/3/movie/movie_id/credits?language=en-US',
+          'https://api.themoviedb.org/3/movie/$id/credits?language=en-US',
           options: _options);
       // * MENGAMBIL DATA ACTORS
       final result =

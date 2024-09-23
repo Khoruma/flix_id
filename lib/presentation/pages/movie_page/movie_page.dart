@@ -4,6 +4,7 @@ import 'package:flutter_riverpod/flutter_riverpod.dart';
 import '../../misc/methods.dart';
 import '../../providers/movie/now_playing_provider.dart';
 import '../../providers/movie/upcoming_provider.dart';
+import '../../providers/router/router_provider.dart';
 import 'methods/movie_list.dart';
 import 'methods/promotion_list.dart';
 import 'methods/search_bar.dart';
@@ -29,7 +30,7 @@ class MoviePage extends ConsumerWidget {
               title: 'Now Playing',
               movies: ref.watch(nowPlayingProvider),
               onTap: (movie) {
-                // TODO: Goto Movie Detail Page
+                ref.watch(routerProvider).goNamed('detail', extra: movie);
               },
             ),
             verticalSpaces(30),

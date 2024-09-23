@@ -22,7 +22,7 @@ mixin _$MovieDetail {
   String get overview => throw _privateConstructorUsedError;
   String? get backdropPath => throw _privateConstructorUsedError;
   int get runtime => throw _privateConstructorUsedError;
-  double get voteAvarage => throw _privateConstructorUsedError;
+  double get voteAverage => throw _privateConstructorUsedError;
   List<String> get genres => throw _privateConstructorUsedError;
 
   @JsonKey(ignore: true)
@@ -43,7 +43,7 @@ abstract class $MovieDetailCopyWith<$Res> {
       String overview,
       String? backdropPath,
       int runtime,
-      double voteAvarage,
+      double voteAverage,
       List<String> genres});
 }
 
@@ -66,7 +66,7 @@ class _$MovieDetailCopyWithImpl<$Res, $Val extends MovieDetail>
     Object? overview = null,
     Object? backdropPath = freezed,
     Object? runtime = null,
-    Object? voteAvarage = null,
+    Object? voteAverage = null,
     Object? genres = null,
   }) {
     return _then(_value.copyWith(
@@ -94,9 +94,9 @@ class _$MovieDetailCopyWithImpl<$Res, $Val extends MovieDetail>
           ? _value.runtime
           : runtime // ignore: cast_nullable_to_non_nullable
               as int,
-      voteAvarage: null == voteAvarage
-          ? _value.voteAvarage
-          : voteAvarage // ignore: cast_nullable_to_non_nullable
+      voteAverage: null == voteAverage
+          ? _value.voteAverage
+          : voteAverage // ignore: cast_nullable_to_non_nullable
               as double,
       genres: null == genres
           ? _value.genres
@@ -121,7 +121,7 @@ abstract class _$$MovieDetailImplCopyWith<$Res>
       String overview,
       String? backdropPath,
       int runtime,
-      double voteAvarage,
+      double voteAverage,
       List<String> genres});
 }
 
@@ -142,7 +142,7 @@ class __$$MovieDetailImplCopyWithImpl<$Res>
     Object? overview = null,
     Object? backdropPath = freezed,
     Object? runtime = null,
-    Object? voteAvarage = null,
+    Object? voteAverage = null,
     Object? genres = null,
   }) {
     return _then(_$MovieDetailImpl(
@@ -170,9 +170,9 @@ class __$$MovieDetailImplCopyWithImpl<$Res>
           ? _value.runtime
           : runtime // ignore: cast_nullable_to_non_nullable
               as int,
-      voteAvarage: null == voteAvarage
-          ? _value.voteAvarage
-          : voteAvarage // ignore: cast_nullable_to_non_nullable
+      voteAverage: null == voteAverage
+          ? _value.voteAverage
+          : voteAverage // ignore: cast_nullable_to_non_nullable
               as double,
       genres: null == genres
           ? _value._genres
@@ -192,7 +192,7 @@ class _$MovieDetailImpl implements _MovieDetail {
       required this.overview,
       this.backdropPath,
       required this.runtime,
-      required this.voteAvarage,
+      required this.voteAverage,
       required final List<String> genres})
       : _genres = genres;
 
@@ -209,7 +209,7 @@ class _$MovieDetailImpl implements _MovieDetail {
   @override
   final int runtime;
   @override
-  final double voteAvarage;
+  final double voteAverage;
   final List<String> _genres;
   @override
   List<String> get genres {
@@ -220,7 +220,7 @@ class _$MovieDetailImpl implements _MovieDetail {
 
   @override
   String toString() {
-    return 'MovieDetail(id: $id, title: $title, posterPath: $posterPath, overview: $overview, backdropPath: $backdropPath, runtime: $runtime, voteAvarage: $voteAvarage, genres: $genres)';
+    return 'MovieDetail(id: $id, title: $title, posterPath: $posterPath, overview: $overview, backdropPath: $backdropPath, runtime: $runtime, voteAverage: $voteAverage, genres: $genres)';
   }
 
   @override
@@ -237,8 +237,8 @@ class _$MovieDetailImpl implements _MovieDetail {
             (identical(other.backdropPath, backdropPath) ||
                 other.backdropPath == backdropPath) &&
             (identical(other.runtime, runtime) || other.runtime == runtime) &&
-            (identical(other.voteAvarage, voteAvarage) ||
-                other.voteAvarage == voteAvarage) &&
+            (identical(other.voteAverage, voteAverage) ||
+                other.voteAverage == voteAverage) &&
             const DeepCollectionEquality().equals(other._genres, _genres));
   }
 
@@ -251,7 +251,7 @@ class _$MovieDetailImpl implements _MovieDetail {
       overview,
       backdropPath,
       runtime,
-      voteAvarage,
+      voteAverage,
       const DeepCollectionEquality().hash(_genres));
 
   @JsonKey(ignore: true)
@@ -269,7 +269,7 @@ abstract class _MovieDetail implements MovieDetail {
       required final String overview,
       final String? backdropPath,
       required final int runtime,
-      required final double voteAvarage,
+      required final double voteAverage,
       required final List<String> genres}) = _$MovieDetailImpl;
 
   @override
@@ -285,7 +285,7 @@ abstract class _MovieDetail implements MovieDetail {
   @override
   int get runtime;
   @override
-  double get voteAvarage;
+  double get voteAverage;
   @override
   List<String> get genres;
   @override

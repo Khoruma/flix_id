@@ -1,3 +1,5 @@
+import '../../../domain/entities/movie.dart';
+import '../../pages/detail_page/detail_page.dart';
 import '../../pages/login_page/login_page.dart';
 import '../../pages/main_page/main_page.dart';
 import 'package:go_router/go_router.dart';
@@ -23,7 +25,14 @@ Raw<GoRouter> router(RouterRef ref) => GoRouter(
           path: '/register',
           name: 'register',
           builder: (context, state) => RegisterPage(),
-        )
+        ),
+        GoRoute(
+          path: '/detail',
+          name: 'detail',
+          builder: (context, state) => DetailPage(
+            movie: state.extra as Movie,
+          ),
+        ),
       ],
       initialLocation: '/login',
       debugLogDiagnostics: false,
