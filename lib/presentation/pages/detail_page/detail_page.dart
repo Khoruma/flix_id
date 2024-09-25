@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 
 import '../../../domain/entities/movie.dart';
+import '../../../domain/entities/movie_detail.dart';
 import '../../misc/constants.dart';
 import '../../misc/methods.dart';
 import '../../providers/movie/movie_detail_provider.dart';
@@ -33,14 +34,8 @@ class DetailPage extends ConsumerWidget {
                 child: Column(
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
-                    BackNavigationBar(movie.title, onTap: () {
-                      final router = ref.read(routerProvider);
-                      if (router.canPop()) {
-                        router.pop();
-                      } else {
-                        router.go('/main');
-                      }
-                    }),
+                    BackNavigationBar(movie.title,
+                        onTap: () => ref.watch(routerProvider).pop()),
                     verticalSpaces(24),
                     //backdrop
                     NetworkImageCard(
@@ -73,7 +68,15 @@ class DetailPage extends ConsumerWidget {
                       borderRadius: BorderRadius.circular(10),
                     ),
                   ),
-                  onPressed: () {},
+                  onPressed: () {
+                    MovieDetail? movieDetail = asyncMovieDetail.valueOrNull;
+
+                    if (movieDetail != null) {
+                      ref
+                          .read(routerProvider)
+                          .pushNamed('time-booking', extra: movieDetail);
+                    }
+                  },
                   child: const Text('Book this movie'),
                 ),
               ),

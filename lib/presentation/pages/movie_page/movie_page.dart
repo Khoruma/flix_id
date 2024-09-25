@@ -30,7 +30,7 @@ class MoviePage extends ConsumerWidget {
               title: 'Now Playing',
               movies: ref.watch(nowPlayingProvider),
               onTap: (movie) {
-                ref.watch(routerProvider).goNamed('detail', extra: movie);
+                ref.watch(routerProvider).pushNamed('detail', extra: movie);
               },
             ),
             verticalSpaces(30),
